@@ -104,7 +104,6 @@
         "deploy": {
           "builder": "angular-cli-ghpages:deploy",
           "options": {
-            "baseHref": "https://mdkincaid.github.io/kincaid-site/",
             "cname": "kincaid.dev",
             "name": "Matthew Kincaid",
             "email": "matthew@kincaid.dev"

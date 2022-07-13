@@ -1,7 +1,13 @@
 <div class="container">
-  <span>kincaid dev</span>
-  <span>under construction</span>
-  <button mat-raised-button color="primary">Hello</button>
+  <div>
+    <span>kincaid dev</span>
+    <span>under construction</span>
+  </div>
+  <button mat-raised-button
+          color="primary"
+          (click)="openDialog()">
+    Hello
+  </button>
 </div>
 
 <router-outlet></router-outlet>

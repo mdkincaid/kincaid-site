@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog'
+import { HelloDialogComponent } from './hello-dialog/hello-dialog.component';
 
 @Component({
   selector: 'app-root',
@@ -6,4 +8,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+
+  constructor( public dialog: MatDialog ) {}
+
+  openDialog(): void {
+    const dialogRef = this.dialog.open(HelloDialogComponent, {
+      width: '500px'
+    });
+  }
 }

@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button'; 
-import { MatDialogModule } from '@angular/material/dialog';
+import { MatDialogModule, MatDialogRef } from '@angular/material/dialog';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -20,7 +20,9 @@ import { HelloDialogComponent } from './hello-dialog/hello-dialog.component';
     MatButtonModule,
     MatDialogModule
   ],
-  providers: [],
+  providers: [
+    { provide: MatDialogRef, useValue: {} }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

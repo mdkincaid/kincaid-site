@@ -12,10 +12,7 @@ describe('HelloDialogComponent', () => {
       imports: [
         MatDialogModule
       ],
-      declarations: [ HelloDialogComponent ],
-      providers: [
-        { provide: MatDialogRef, useValue: {} },
-      ]
+      declarations: [ HelloDialogComponent ]
     })
     .compileComponents();
 

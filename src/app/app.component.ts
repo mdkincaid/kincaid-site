@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MatDialog } from '@angular/material/dialog'
+import { MatDialog, MatDialogRef } from '@angular/material/dialog'
 
 import { HelloDialogComponent } from './hello-dialog/hello-dialog.component';
 import { environment } from 'src/environments/environment';
@@ -10,18 +10,27 @@ import { environment } from 'src/environments/environment';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  public isDevEnv: boolean = true;
+  public isDevEnv = true;
+  
+  private _dialog: MatDialog;
+  private _dialogRef: MatDialogRef<HelloDialogComponent>;
 
-  constructor( public dialog: MatDialog ) {}
+  constructor(
+    public dialog: MatDialog,
+    public dialogRef: MatDialogRef<HelloDialogComponent>
+  ) {
+    this._dialog = dialog;
+    this._dialogRef = dialogRef;
+  }
 
-  ngOnInit(): void {
+  public ngOnInit(): void {
     if (environment.production) {
       this.isDevEnv = false;
     }
   }
 
-  openDialog(): void {
-    const dialogRef = this.dialog.open(HelloDialogComponent, {
+  public openDialog(): void {
+    this._dialogRef = this.dialog.open(HelloDialogComponent, {
       width: '500px'
     });
   }

@@ -35,4 +35,11 @@ describe('AppComponent', () => {
     const compiled = fixture.nativeElement as HTMLElement;
     expect(compiled.querySelector('span')?.textContent).toContain('kincaid dev');
   });
+
+  it('should open dialog when user clicks button', () => {
+    const openDialogSpy = spyOn(component.dialog, 'open');
+    component.openDialog();
+    expect(openDialogSpy).toHaveBeenCalled();
+  });
+
 });

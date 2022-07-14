@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog, MatDialogRef } from '@angular/material/dialog'
 
-import { HelloDialogComponent } from './hello-dialog/hello-dialog.component';
 import { environment } from 'src/environments/environment';
+import { HelloDialogComponent } from './hello-dialog/hello-dialog.component';
 
 @Component({
   selector: 'app-root',
@@ -17,7 +17,7 @@ export class AppComponent implements OnInit {
 
   constructor(
     public dialog: MatDialog,
-    public dialogRef: MatDialogRef<HelloDialogComponent>
+    public dialogRef: MatDialogRef<HelloDialogComponent>,
   ) {
     this._dialog = dialog;
     this._dialogRef = dialogRef;

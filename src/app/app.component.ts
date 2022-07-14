@@ -1,7 +1,6 @@
 import { Component, isDevMode, OnInit } from '@angular/core';
 import { MatDialog, MatDialogRef } from '@angular/material/dialog'
 
-import { environment } from 'src/environments/environment';
 import { HelloDialogComponent } from './hello-dialog/hello-dialog.component';
 
 @Component({

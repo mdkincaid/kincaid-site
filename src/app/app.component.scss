@@ -1,3 +1,5 @@
+@import '../styles.scss';
+
 .container {
   display: flex;
   flex-direction: column;
@@ -11,4 +13,18 @@
     align-items: center;
     flex-direction: column;
   }
+}
+
+.corner-ribbon {
+  width: 200px;
+  position: absolute;
+  top: auto;
+  bottom: 25px;
+  left: -50px;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  text-align: center;
+  line-height: 50px;
+  letter-spacing: 1px;
+  background: #c2ab61;
 }

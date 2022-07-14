@@ -2,7 +2,7 @@
 // Custom Theming for Angular Material
 // For more information: https://material.angular.io/guide/theming
 @use '@angular/material' as mat;
-@use './styles/palettes.scss' as kinPalette;
+@use './styles/_variables.scss' as kinPalette;
 // Plus imports for other components in your app.
 
 // Include the common styles for Angular Material. We include this here so that you only
@@ -13,8 +13,8 @@
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
-$kincaid-site-primary: mat.define-palette(kinPalette.$md-kincaidprimary);
-$kincaid-site-accent: mat.define-palette(kinPalette.$md-kincaidsecondary);
+$kincaid-site-primary: mat.define-palette(kinPalette.$md-primary);
+$kincaid-site-accent: mat.define-palette(kinPalette.$md-secondary);
 
 // The warn palette is optional (defaults to red).
 $kincaid-site-warn: mat.define-palette(mat.$red-palette);

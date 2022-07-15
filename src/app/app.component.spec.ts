@@ -1,7 +1,7 @@
 import { DebugElement } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { MatDialogRef } from '@angular/material/dialog';
-import { MatSlideToggle, MatSlideToggleRequiredValidator } from '@angular/material/slide-toggle';
+import { MatSlideToggle } from '@angular/material/slide-toggle';
 import { By } from '@angular/platform-browser';
 import { RouterTestingModule } from '@angular/router/testing';
 
@@ -9,7 +9,7 @@ import { AppComponent } from './app.component';
 import { MaterialModule } from './shared/material.module';
 import { ThemeService } from './shared/services/theme.service';
 
-xdescribe('AppComponent', () => {
+describe('AppComponent', () => {
   let fixture: ComponentFixture<AppComponent>;
   let component: AppComponent;
   let componentDebug: DebugElement;
@@ -59,10 +59,13 @@ xdescribe('AppComponent', () => {
       .and.callFake(mockLocalStorage.removeItem);
     spyOn(localStorage, 'clear')
       .and.callFake(mockLocalStorage.clear);
+
+    localStorage.clear();
   });
 
   it('should create the app', () => {
     expect(component).toBeTruthy();
+    expect(component.isDarkMode).toBeFalse();
   });
 
   it('should open dialog when user clicks button', () => {
@@ -82,9 +85,9 @@ xdescribe('AppComponent', () => {
     expect(component.toggleDarkMode).toHaveBeenCalled();
   });
 
-  it('toggle to dark mode', () => {
-    spyOn(themeService, 'update').and.callThrough();
-    spyOn(themeService, 'isDarkMode').and.callThrough();
+  it('should toggle from light mode to dark mode', () => {
+    spyOn(themeService, 'update');
+    spyOn(themeService, 'isDarkMode').and.returnValue(false);
 
     component.toggleDarkMode();
 
@@ -92,9 +95,9 @@ xdescribe('AppComponent', () => {
     expect(themeService.update).toHaveBeenCalledWith('dark-mode');
   });
 
-  it('toggle to light mode', () => {
-    spyOn(themeService, 'update').and.callThrough();
-    spyOn(themeService, 'isDarkMode').and.callThrough();
+  it('should toggle from dark mode to light mode', () => {
+    spyOn(themeService, 'update');
+    spyOn(themeService, 'isDarkMode').and.returnValue(true);
 
     component.toggleDarkMode();
 

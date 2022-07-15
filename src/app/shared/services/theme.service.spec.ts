@@ -33,6 +33,9 @@ describe('ThemeService', () => {
       .and.callFake(mockLocalStorage.removeItem);
     spyOn(localStorage, 'clear')
       .and.callFake(mockLocalStorage.clear);
+
+    localStorage.clear();
+    service.initTheme();
   });
 
   it('should be created', () => {
@@ -40,26 +43,19 @@ describe('ThemeService', () => {
   });
 
   it('should be set to light mode when first initialized', () => {
-    localStorage.clear();
-    service.initTheme();
     expect(service.isDarkMode()).toBeFalse();
   });
 
-  it('should remember theme when initalizaing after the first time', () => {
-    localStorage.clear();
-    service.initTheme();
+  it('should remember theme when initalizaing after updating theme', () => {
     service.update('light-mode');
     service.initTheme();
+
     expect(service.isDarkMode()).toBeFalse();
   });
 
-  it('should display dark mode when color theme is set to dark mode', () => {
+  it('should set theme to dark-mode when passing dark-mode into update', () => {
     service.update('dark-mode');
-    expect(service.isDarkMode()).toBeTrue;
-  });
 
-  it('should display light mode when color theme is set to light mode', () => {
-    service.update('light-mode');
-    expect(service.isDarkMode()).toBeFalse;
+    expect(service.isDarkMode()).toBeTrue();  
   });
 });

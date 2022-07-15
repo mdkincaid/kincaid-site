@@ -32,5 +32,6 @@ export class AppComponent {
   public toggleDarkMode(): void {
     this.isDarkMode = this.themeService.isDarkMode();
     this.isDarkMode ? this.themeService.update('light-mode') : this.themeService.update('dark-mode');
+    this.isDarkMode = this.themeService.isDarkMode();
   }
 }

@@ -1,16 +1,18 @@
 import { NgModule } from "@angular/core";
-import { FormsModule } from "@angular/forms";
 import { MatButtonModule } from "@angular/material/button";
 import { MatDialogModule } from "@angular/material/dialog";
+import { MatIconModule } from "@angular/material/icon";
 import { MatSlideToggleModule } from '@angular/material/slide-toggle'; 
 import { MatToolbarModule } from '@angular/material/toolbar'; 
+import { MatTooltipModule } from '@angular/material/tooltip'; 
 
 const materialModules = [
     MatButtonModule,
     MatDialogModule,
-    FormsModule,
+    MatIconModule,
     MatSlideToggleModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatTooltipModule
 ];
 
 @NgModule({

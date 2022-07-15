@@ -1,4 +1,4 @@
-import { Component, isDevMode, OnInit } from '@angular/core';
+import { Component, isDevMode } from '@angular/core';
 import { MatDialog, MatDialogRef } from '@angular/material/dialog'
 
 import { HelloDialogComponent } from './hello-dialog/hello-dialog.component';
@@ -9,8 +9,8 @@ import { ThemeService } from './shared/services/theme.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit {
-  public isDevEnv = false;
+export class AppComponent {
+  public isDevEnv: boolean;
   public isDarkMode: boolean;
 
   constructor(
@@ -20,12 +20,7 @@ export class AppComponent implements OnInit {
   ) {
     this.themeService.initTheme();
     this.isDarkMode = this.themeService.isDarkMode();
-  }
-
-  public ngOnInit(): void {
-    if (isDevMode()) {
-      this.isDevEnv = true;
-    }
+    this.isDevEnv = isDevMode();
   }
 
   public openDialog(): void {

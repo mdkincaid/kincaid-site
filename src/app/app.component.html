@@ -21,4 +21,4 @@
 </div>
 
 <router-outlet></router-outlet>
-<div class="corner-ribbon">Dev</div>
+<div *ngIf="isDevEnv" class="corner-ribbon">Dev</div>

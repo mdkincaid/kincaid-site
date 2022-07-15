@@ -76,15 +76,6 @@ describe('AppComponent', () => {
     expect(openDialogSpy).toHaveBeenCalled();
   });
 
-  it('should toggle site theme when theme toggle is clicked', () => {
-    const slideToggle = componentDebug.query(By.directive(MatSlideToggle));
-    spyOn(component, 'toggleDarkMode');
-
-    slideToggle.triggerEventHandler('toggleChange', null);
-
-    expect(component.toggleDarkMode).toHaveBeenCalled();
-  });
-
   it('should toggle from light mode to dark mode', () => {
     spyOn(themeService, 'update');
     spyOn(themeService, 'isDarkMode').and.returnValue(false);

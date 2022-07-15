@@ -2,6 +2,7 @@ import { Component, isDevMode, OnInit } from '@angular/core';
 import { MatDialog, MatDialogRef } from '@angular/material/dialog'
 
 import { HelloDialogComponent } from './hello-dialog/hello-dialog.component';
+import { ThemeService } from './shared/services/theme.service';
 
 @Component({
   selector: 'app-root',
@@ -10,16 +11,15 @@ import { HelloDialogComponent } from './hello-dialog/hello-dialog.component';
 })
 export class AppComponent implements OnInit {
   public isDevEnv = false;
-  
-  private _dialog: MatDialog;
-  private _dialogRef: MatDialogRef<HelloDialogComponent>;
+  public isDarkMode: boolean;
 
   constructor(
     public dialog: MatDialog,
     public dialogRef: MatDialogRef<HelloDialogComponent>,
+    public themeService: ThemeService
   ) {
-    this._dialog = dialog;
-    this._dialogRef = dialogRef;
+    this.themeService.initTheme();
+    this.isDarkMode = this.themeService.isDarkMode();
   }
 
   public ngOnInit(): void {
@@ -29,8 +29,13 @@ export class AppComponent implements OnInit {
   }
 
   public openDialog(): void {
-    this._dialogRef = this.dialog.open(HelloDialogComponent, {
+    this.dialogRef = this.dialog.open(HelloDialogComponent, {
       width: '500px'
     });
+  }
+
+  public toggleDarkMode(): void {
+    this.isDarkMode = this.themeService.isDarkMode();
+    this.isDarkMode ? this.themeService.update('light-mode') : this.themeService.update('dark-mode');
   }
 }

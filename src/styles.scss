@@ -47,5 +47,12 @@ $kincaid-dark-theme: mat.define-dark-theme((
 }
 
 /* You can add global styles to this file, and also import other style files */
-html, body { height: 100%; }
-body, body [class^='mat-'], body [class*=' mat-'] { margin: 0; font-family: 'Roboto Mono', monospace !important; }
+html,
+body {
+  height: 100%;
+}
+body,
+body [class^='mat-'],
+body [class*=' mat-'] {
+  margin: 0; font-family: 'Roboto Mono', monospace !important;
+}

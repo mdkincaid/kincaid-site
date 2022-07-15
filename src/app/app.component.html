@@ -1,3 +1,13 @@
+<mat-toolbar colors="primary">
+  <mat-toolbar-row>
+    <span>Kincaid Dev</span>
+    <span style="flex: 1 1 auto"></span>
+    <mat-slide-toggle (toggleChange)="toggleDarkMode()"
+                      [(ngModel)]="isDarkMode">
+    </mat-slide-toggle>
+  </mat-toolbar-row>
+</mat-toolbar>  
+
 <div class="container">
   <div>
     <span>kincaid dev</span>
@@ -9,6 +19,6 @@
     Hello
   </button>
 </div>
-<div class="corner-ribbon">Dev</div>
 
 <router-outlet></router-outlet>
+<div class="corner-ribbon">Dev</div>

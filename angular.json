@@ -37,8 +37,8 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kb",
-                  "maximumError": "1mb"
+                  "maximumWarning": "1mb",
+                  "maximumError": "1500kb"
                 },
                 {
                   "type": "anyComponentStyle",
@@ -104,6 +104,7 @@
         "deploy": {
           "builder": "angular-cli-ghpages:deploy",
           "options": {
+            "buildTarget": "production",
             "cname": "kincaid.dev",
             "name": "Matthew Kincaid",
             "email": "matthew@kincaid.dev"

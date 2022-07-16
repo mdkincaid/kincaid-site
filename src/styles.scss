@@ -43,7 +43,7 @@ $kincaid-dark-theme: mat.define-dark-theme(
 }
 
 .light-mode {
-	@include mat.all-component-colors($kincaid-light-theme);
+	@include mat.all-component-themes($kincaid-light-theme);
 }
 
 html,

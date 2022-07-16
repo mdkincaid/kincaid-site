@@ -1,35 +1,35 @@
 <mat-toolbar colors="primary">
-  <mat-toolbar-row>
-    <span>Kincaid Dev</span>
-    <span style="flex: 1 1 auto"></span>
-    <button mat-icon-button
-            *ngIf="!isDarkMode"
-            (click)="toggleDarkMode()"
-            color="primary"
-            matTooltip="Toggle Dark Mode"
-            aria-label="Toggle Dark Mode">
-      <mat-icon>dark_mode</mat-icon>
-    </button>
-    <button mat-icon-button
-            *ngIf="isDarkMode"
-            (click)="toggleDarkMode()"
-            color="accent"
-            matTooltip="Toggle Light Mode"
-            aria-label="Toggle Light Mode">
-      <mat-icon>light_mode</mat-icon>
-    </button>
-  </mat-toolbar-row>
-</mat-toolbar>  
+	<mat-toolbar-row>
+		<span>Kincaid Dev</span>
+		<span style="flex: 1 1 auto"></span>
+		<button
+			mat-icon-button
+			*ngIf="!isDarkMode"
+			(click)="toggleDarkMode()"
+			color="primary"
+			matTooltip="Toggle Dark Mode"
+			aria-label="Toggle Dark Mode">
+			<mat-icon>dark_mode</mat-icon>
+		</button>
+		<button
+			mat-icon-button
+			*ngIf="isDarkMode"
+			(click)="toggleDarkMode()"
+			color="accent"
+			matTooltip="Toggle Light Mode"
+			aria-label="Toggle Light Mode">
+			<mat-icon>light_mode</mat-icon>
+		</button>
+	</mat-toolbar-row>
+</mat-toolbar>
 
 <div class="container">
-  <div>
-    <span>under construction</span>
-  </div>
-  <button mat-raised-button
-          color="primary"
-          (click)="openDialog()">
-    Hello
-  </button>
+	<div>
+		<span>under construction</span>
+	</div>
+	<button mat-raised-button color="primary" (click)="openDialog()">
+		Hello
+	</button>
 </div>
 
 <router-outlet></router-outlet>

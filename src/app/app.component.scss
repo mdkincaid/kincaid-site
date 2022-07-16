@@ -1,28 +1,28 @@
 .container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  gap: 1em;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	gap: 1em;
 
-  div {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-  }
+	div {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+	}
 }
 
 .corner-ribbon {
-  width: 200px;
-  position: absolute;
-  top: auto;
-  bottom: 25px;
-  left: -50px;
-  transform: rotate(45deg);
-  -webkit-transform: rotate(45deg);
-  text-align: center;
-  line-height: 50px;
-  letter-spacing: 1px;
-  background: #c2ab61;
+	width: 200px;
+	position: absolute;
+	top: auto;
+	bottom: 25px;
+	left: -50px;
+	transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	text-align: center;
+	line-height: 50px;
+	letter-spacing: 1px;
+	background: #c2ab61;
 }

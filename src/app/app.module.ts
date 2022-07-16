@@ -10,20 +10,15 @@ import { HelloDialogComponent } from './hello-dialog/hello-dialog.component';
 import { MaterialModule } from './shared/material.module';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HelloDialogComponent
-  ],
-  imports: [
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    BrowserModule,
-    FormsModule,
-    MaterialModule
-  ],
-  providers: [
-    { provide: MatDialogRef, useValue: {} }
-  ],
-  bootstrap: [AppComponent]
+	declarations: [AppComponent, HelloDialogComponent],
+	imports: [
+		AppRoutingModule,
+		BrowserAnimationsModule,
+		BrowserModule,
+		FormsModule,
+		MaterialModule,
+	],
+	providers: [{ provide: MatDialogRef, useValue: {} }],
+	bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

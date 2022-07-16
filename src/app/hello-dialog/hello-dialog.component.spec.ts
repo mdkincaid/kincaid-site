@@ -4,24 +4,21 @@ import { HelloDialogComponent } from './hello-dialog.component';
 import { MaterialModule } from '../shared/material.module';
 
 describe('HelloDialogComponent', () => {
-  let component: HelloDialogComponent;
-  let fixture: ComponentFixture<HelloDialogComponent>;
+	let component: HelloDialogComponent;
+	let fixture: ComponentFixture<HelloDialogComponent>;
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      imports: [
-        MaterialModule
-      ],
-      declarations: [ HelloDialogComponent ]
-    })
-    .compileComponents();
+	beforeEach(async () => {
+		await TestBed.configureTestingModule({
+			imports: [MaterialModule],
+			declarations: [HelloDialogComponent],
+		}).compileComponents();
 
-    fixture = TestBed.createComponent(HelloDialogComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+		fixture = TestBed.createComponent(HelloDialogComponent);
+		component = fixture.componentInstance;
+		fixture.detectChanges();
+	});
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
+	it('should create', () => {
+		expect(component).toBeTruthy();
+	});
 });

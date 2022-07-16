@@ -1,4 +1,3 @@
-
 // Custom Theming for Angular Material
 // For more information: https://material.angular.io/guide/theming
 @use '@angular/material' as mat;
@@ -20,26 +19,30 @@ $kincaid-accent: mat.define-palette(var.$secondary-palette);
 $kincaid-warn: mat.define-palette(mat.$red-palette);
 
 $kincaid-typography: mat.define-typography-config(
-  $font-family: 'Roboto Mono'
+	$font-family: 'Roboto Mono',
 );
 
 // Create the theme object. A theme consists of configurations for individual
 // theming systems such as "color" or "typography".
-$kincaid-light-theme: mat.define-light-theme((
-  color: (
-    primary: $kincaid-primary,
-    accent: $kincaid-accent,
-    warn: $kincaid-warn,
-  )
-));
+$kincaid-light-theme: mat.define-light-theme(
+	(
+		color: (
+			primary: $kincaid-primary,
+			accent: $kincaid-accent,
+			warn: $kincaid-warn,
+		),
+	)
+);
 
-$kincaid-dark-theme: mat.define-dark-theme((
-  color: (
-    primary: $kincaid-primary,
-    accent: $kincaid-accent,
-    warn: $kincaid-warn,
-  )
-));
+$kincaid-dark-theme: mat.define-dark-theme(
+	(
+		color: (
+			primary: $kincaid-primary,
+			accent: $kincaid-accent,
+			warn: $kincaid-warn,
+		),
+	)
+);
 
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
@@ -48,16 +51,16 @@ $kincaid-dark-theme: mat.define-dark-theme((
 @include mat.all-component-themes($kincaid-dark-theme);
 
 .light-mode {
-  @include mat.all-component-colors($kincaid-light-theme);
+	@include mat.all-component-colors($kincaid-light-theme);
 }
 
 /* You can add global styles to this file, and also import other style files */
 html,
 body {
-  height: 100%;
+	height: 100%;
 }
 body,
 body [class^='mat-'],
 body [class*=' mat-'] {
-  margin: 0;
+	margin: 0;
 }

@@ -1,7 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { MaterialModule } from '../shared/material.module';
 
 import { HelloDialogComponent } from './hello-dialog.component';
+import { MaterialModule } from '../shared/material.module';
 
 describe('HelloDialogComponent', () => {
   let component: HelloDialogComponent;

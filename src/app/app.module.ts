@@ -1,11 +1,11 @@
-import { NgModule } from '@angular/core';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { MatDialogRef } from '@angular/material/dialog';
-import { BrowserModule } from '@angular/platform-browser';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NgModule } from '@angular/core';
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { AppRoutingModule } from './app-routing.module';
 import { HelloDialogComponent } from './hello-dialog/hello-dialog.component';
 import { MaterialModule } from './shared/material.module';
 
@@ -17,8 +17,8 @@ import { MaterialModule } from './shared/material.module';
   imports: [
     AppRoutingModule,
     BrowserAnimationsModule,
-    FormsModule,
     BrowserModule,
+    FormsModule,
     MaterialModule
   ],
   providers: [

@@ -1,8 +1,8 @@
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { MatDialogRef } from '@angular/material/dialog';
 import { NgModule } from '@angular/core';
+import { BrowserModule, Title } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -18,7 +18,7 @@ import { MaterialModule } from './shared/material.module';
 		FormsModule,
 		MaterialModule,
 	],
-	providers: [{ provide: MatDialogRef, useValue: {} }],
+	providers: [{ provide: MatDialogRef, useValue: {} }, Title],
 	bootstrap: [AppComponent],
 })
 export class AppModule {}

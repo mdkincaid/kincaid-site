@@ -9,6 +9,7 @@ describe('ThemeService', () => {
 		TestBed.configureTestingModule({});
 		service = TestBed.inject(ThemeService);
 
+		// eslint-disable-next-line
 		let store: any = {};
 		const mockLocalStorage = {
 			getItem: (key: string): string => {

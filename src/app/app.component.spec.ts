@@ -23,6 +23,7 @@ describe('AppComponent', () => {
 		themeService = TestBed.inject(ThemeService);
 		fixture.detectChanges();
 
+		// eslint-disable-next-line
 		let store: any = {};
 		const mockLocalStorage = {
 			getItem: (key: string): string => {

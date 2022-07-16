@@ -1,8 +1,5 @@
-import { DebugElement } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { MatDialogRef } from '@angular/material/dialog';
-import { MatSlideToggle } from '@angular/material/slide-toggle';
-import { By } from '@angular/platform-browser';
 import { RouterTestingModule } from '@angular/router/testing';
 
 import { AppComponent } from './app.component';
@@ -12,7 +9,6 @@ import { ThemeService } from './shared/services/theme.service';
 describe('AppComponent', () => {
   let fixture: ComponentFixture<AppComponent>;
   let component: AppComponent;
-  let componentDebug: DebugElement;
   let themeService: ThemeService;
 
   beforeEach(async () => {
@@ -31,7 +27,6 @@ describe('AppComponent', () => {
 
     fixture = TestBed.createComponent(AppComponent);
     component = fixture.componentInstance;
-    componentDebug = fixture.debugElement;
     themeService = TestBed.inject(ThemeService);
     fixture.detectChanges();
 

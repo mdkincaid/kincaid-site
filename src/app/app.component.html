@@ -2,6 +2,18 @@
 	<mat-toolbar-row>
 		<span>Kincaid Dev</span>
 		<span style="flex: 1 1 auto"></span>
+		<a
+			mat-icon-button
+			href="https://www.linkedin.com/in/matthew-kincaid/"
+			aria-label="External Link to LinkedIn">
+			<fa-icon [icon]="['fab', 'linkedin']" size="lg"></fa-icon>
+		</a>
+		<a
+			mat-icon-button
+			href="https://github.com/mdkincaid"
+			aria-label="External Link to GitHub">
+			<fa-icon [icon]="['fab', 'github']" size="lg"></fa-icon>
+		</a>
 		<button
 			mat-icon-button
 			*ngIf="!isDarkMode"
@@ -24,9 +36,7 @@
 </mat-toolbar>
 
 <div class="container">
-	<div>
-		<span>under construction</span>
-	</div>
+	<span>under construction</span>
 	<button mat-raised-button color="primary" (click)="openDialog()">
 		Hello
 	</button>

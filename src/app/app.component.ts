@@ -1,6 +1,6 @@
 import { Title } from '@angular/platform-browser';
 import { Component, isDevMode } from '@angular/core';
-import { MatDialog, MatDialogRef } from '@angular/material/dialog';
+import { MatLegacyDialog as MatDialog, MatLegacyDialogRef as MatDialogRef } from '@angular/material/legacy-dialog';
 
 import { HelloDialogComponent } from './hello-dialog/hello-dialog.component';
 import { ThemeService } from './shared/services/theme.service';

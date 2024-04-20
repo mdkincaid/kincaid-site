@@ -13,9 +13,10 @@
 
 | Technologies Used   |        |
 | ------------------- | ------ |
-| Angular             | 14.0.0 |
+| Angular             | 17.3.5 |
+| TypeScript          | 5.3.2  |
 | Karma               | 6.3.0  |
 | Jasmine             | 4.1.0  |
 | Prettier            | 2.7.1  |
-| ESLint              | 8.18.0 |
+| ESLint              | 8.57.0 |
 | angular-cli-ghpages | 1.0.0  |

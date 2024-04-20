@@ -26,3 +26,30 @@ mat-nav-list {
 	flex-direction: row;
 	padding-top: 0;
 }
+
+.about {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: left;
+}
+
+.social-buttons {
+	display: flex;
+	gap: 1em;
+}
+
+.name {
+	font-size: xx-large;
+	margin-bottom: .25em;
+}
+
+.title {
+	font-size: medium;
+	margin-bottom: .5em;
+	color: #acc9ff;
+}
+
+.description {
+	font-size: small;
+}

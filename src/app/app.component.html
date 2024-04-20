@@ -2,18 +2,6 @@
 	<mat-toolbar-row>
 		<span>Kincaid Dev</span>
 		<span style="flex: 1 1 auto"></span>
-		<a
-			mat-icon-button
-			href="https://www.linkedin.com/in/matthew-kincaid/"
-			aria-label="External Link to LinkedIn">
-			<fa-icon [icon]="['fab', 'linkedin']" size="lg"></fa-icon>
-		</a>
-		<a
-			mat-icon-button
-			href="https://github.com/mdkincaid"
-			aria-label="External Link to GitHub">
-			<fa-icon [icon]="['fab', 'github']" size="lg"></fa-icon>
-		</a>
 		<button
 			mat-icon-button
 			*ngIf="!isDarkMode"
@@ -36,10 +24,31 @@
 </mat-toolbar>
 
 <div class="container">
-	<span>under construction</span>
-	<button mat-raised-button color="primary" (click)="openDialog()">
-		Hello
-	</button>
+	<div class="about">
+		<span class="name">Matthew Kincaid</span>
+		<span class="title">Full-Stack Web Developer</span>
+		<span class="description"
+			>5+ years of industry experience working with Angular, C#, and SQL</span
+		>
+	</div>
+	<div class="social-buttons">
+		<a
+			mat-raised-button
+			color="primary"
+			href="https://www.linkedin.com/in/matthew-kincaid/"
+			target="_blank"
+			aria-label="External Link to LinkedIn"
+			>LinkedIn</a
+		>
+		<a
+			mat-raised-button
+			color="primary"
+			href="https://github.com/mdkincaid"
+			target="_blank"
+			aria-label="External Link to GitHub">
+			GitHub
+		</a>
+	</div>
 </div>
 
 <router-outlet></router-outlet>

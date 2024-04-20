@@ -15,7 +15,7 @@
 | ------------------- | ------ |
 | Angular             | 14.0.0 |
 | Karma               | 6.3.0  |
-| Jasimne             | 4.1.0  |
+| Jasmine             | 4.1.0  |
 | Prettier            | 2.7.1  |
 | ESLint              | 8.18.0 |
 | angular-cli-ghpages | 1.0.0  |

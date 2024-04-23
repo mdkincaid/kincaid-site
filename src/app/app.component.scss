@@ -5,13 +5,8 @@
 	align-items: center;
 	height: 100vh;
 	gap: 1em;
-}
-
-@media only screen and (max-width: 550px) {
-	.container {
-		margin-left: 1em;
-		margin-right: 1em;
-	}
+	margin-left: 1em;
+	margin-right: 1em;
 }
 
 @media only screen and (max-width: 320px) {
@@ -45,7 +40,7 @@ mat-nav-list {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	align-items: left;
+	align-items: center;
 }
 
 .social-buttons {
@@ -66,4 +61,10 @@ mat-nav-list {
 
 .description {
 	font-size: small;
+}
+
+.current-project {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
